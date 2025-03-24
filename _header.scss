@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &-text {
+      @include headerText;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 5.29px;
+
+    &-input {
+      background: rgba(71, 147, 255, 0.2);
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      padding: 9px 45px 9px 20px;
+      font-family: $font-family;
+
+      &::placeholder {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000;
+      }
+    }
+  }
+}

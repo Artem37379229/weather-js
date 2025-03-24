@@ -1,0 +1,85 @@
+.weather-week {
+    opacity: 0;
+    transition: all .3s;
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 7px;
+      padding-top: 50px;
+    }
+  
+    &__button {
+      border-radius: 5px;
+      background: #4793ff;
+      padding: 7px 20px 9px 21px;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 18px;
+      color: #fff;
+      border: none;
+    }
+    
+    &__content {
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    }
+  
+    &__card {
+      max-width: 149px;
+      width: 100%;
+      flex-shrink: 0;
+      background: rgba(71, 147, 255, 0.2);
+      padding: 11px 0px 11px 11px;
+      border-radius: 10px;
+    }
+  }
+  
+  .card{
+    &__title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 18px;
+      color: #000;
+    }
+  
+    &__data {
+      padding-top: 7px;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: #939cb0;
+    }
+  
+    &__image {
+      padding-top: 12px;
+    }
+  
+    &__max-temp {
+      font-family: $font-family;
+      padding-top: 13px;
+      font-weight: 500;
+      font-size: 18px;
+      color: #000;
+    }
+  
+    &__min-temp {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 13px;
+      color: #939cb0;
+    }
+  
+    &__about {
+      font-family: $font-family;
+      padding-top: 6px;
+      font-weight: 400;
+      font-size: 13px;
+      color: #939cb0;
+    }
+  }

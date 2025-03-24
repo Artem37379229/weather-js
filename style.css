@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #939cb0;
+}
+
+.noResult {
+  opacity: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #4793ff;
+}
+.header__form {
+  display: flex;
+  align-items: center;
+  gap: 5.29px;
+}
+.header__form-input {
+  background: rgba(71, 147, 255, 0.2);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  padding: 9px 45px 9px 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.header__form-input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+.header__form-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+
+.data__info {
+  display: flex;
+  gap: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.data__info-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.info {
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s;
+}
+.info img {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+}
+.info__parametrs {
+  margin-top: 31px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.info__gradus {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 96px;
+  color: #4793ff;
+}
+.info__day {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+}
+
+.data {
+  border-radius: 20px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  transition: all 0.3s;
+}
+.data img {
+  border-radius: 100%;
+  box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+  width: 38px;
+  height: 38px;
+}
+.data__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 40px;
+}
+.data__stroke {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 25px;
+}
+.data__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #939cb0;
+  width: 96px;
+}
+.data__paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+
+.weather-week {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.weather-week__container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  padding-top: 50px;
+}
+.weather-week__button {
+  border-radius: 5px;
+  background: #4793ff;
+  padding: 7px 20px 9px 21px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+}
+.weather-week__content {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+}
+.weather-week__card {
+  max-width: 149px;
+  width: 100%;
+  flex-shrink: 0;
+  background: rgba(71, 147, 255, 0.2);
+  padding: 11px 0px 11px 11px;
+  border-radius: 10px;
+}
+
+.card__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+}
+.card__data {
+  padding-top: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #939cb0;
+}
+.card__image {
+  padding-top: 12px;
+}
+.card__max-temp {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+}
+.card__min-temp {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #939cb0;
+}
+.card__about {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 6px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #939cb0;
+}
+
+@media screen and (max-width: 1010px) {
+  .data__info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .data {
+    max-width: 400px;
+  }
+  .data__stroke {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1195px) {
+  .weather-week__content {
+    overflow-x: scroll;
+  }
+}/*# sourceMappingURL=style.css.map */

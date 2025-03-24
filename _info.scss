@@ -1,0 +1,39 @@
+.info {
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    transition: all .3s;
+
+    img {
+      position: absolute;
+      top: 26px;
+      right: 20px;
+    }
+
+   &__parametrs {
+         margin-top: 31px;
+         gap: 14px;
+         display: flex;
+         flex-direction: column;
+   }
+
+  
+
+    &__gradus {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 96px;
+        color: #4793ff;
+    }
+
+    &__day {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 40px;
+        color: #000;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+    <title>Weather</title>
+<body>
+    <div class="weather">
+        <div class="container">
+            <header class="header">
+                <div class="header__logo">
+                    <img src="./images/Header logo.svg" alt="">
+                    <div class="header__logo-text">js weather</div>
+                </div>
+                <div class="header__form">
+                    <img class="header__form-img" src="./images/invert_colors_black_24dp 1.svg" alt="">
+                    <input type="text" class="header__form-input" placeholder="Выбрать город">
+                </div>
+            </header>
+            <div class="noResult">Не найдено</div>
+            <div class="data__info">
+                <div class="info">
+                    <div class="info__content">
+                        <img class="info__image" src="./images/sun.svg" width="119px" height="119px" alt="">
+                        <div class="info__details">
+                            <div class="info__gradus">20°</div>
+                            <div class="info__day">Сегодня</div>
+                        </div>
+                        <div class="info__parametrs">
+                            <div class="info__time font">Время: 21:54</div>
+                            <div class="info__city font">Город: Санкт-Петербург</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="data">
+                    <div class="data__content">
+                        <div class="data__stroke">
+                            <img src="./images/temp.svg" alt="">
+                            <span class="data__text">Температура</span>
+                            <div class="data__paragraph temp">20° - ощущается как 17°</div>
+                        </div>
+                        <div class="data__stroke">
+                            <img src="./images/pressure.svg" alt="">
+                            <span class="data__text">Давление</span>
+                            <div class="data__paragraph pressure">765 мм ртутного столба - нормальное</div>
+                        </div>
+                        <div class="data__stroke">
+                            <img src="./images/Group.svg" alt="">
+                            <span class="data__text">Осадки</span>
+                            <div class="data__paragraph humidity">Без осадков</div>
+                        </div>
+                        <div class="data__stroke">
+                            <img src="./images/wind.svg" alt="">
+                            <span class="data__text">Ветер</span>
+                            <div class="data__paragraph wind">3 м/с юго-запад - легкий ветер</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-week">
+                <div class="weather-week__container">
+                    <button class="weather-week__button">На неделю</button>
+                </div>
+                <div class="weather-week__content">
+                    <div class="weather-week__card">
+                        <div class="card__title">Сегодня</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                    <div class="weather-week__card">
+                        <div class="card__title">Завтра</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                    <div class="weather-week__card">
+                        <div class="card__title">СР</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                    <div class="weather-week__card">
+                        <div class="card__title">ЧТ</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                    <div class="weather-week__card">
+                        <div class="card__title">ПТ</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                    <div class="weather-week__card">
+                        <div class="card__title">СБ</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                    <div class="weather-week__card">
+                        <div class="card__title">ВС</div>
+                        <div class="card__data">28 авг</div>
+                        <img class="card__image" src="./images/sun_rain.svg" width="48px" height="48px" alt="">
+                        <div class="card__max-temp">+18</div>
+                        <div class="card__min-temp">+15</div>
+                        <div class="card__about">Пасмурно</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

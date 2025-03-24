@@ -1,0 +1,73 @@
+@import "./reset";
+@import "./mixins";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+@import './header';
+@import './info';
+@import './data';
+@import './weather-week';
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.font {
+   font-family: $font-family;
+   font-weight: 400;
+   font-size: 25px;
+   color: #939cb0;
+}
+
+
+.noResult {
+  opacity: 0;
+  font-family: $font-family;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.data__info {
+  display: flex;
+  gap: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.data__info-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width:1010px) {
+  .data__info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .data {
+    max-width: 400px;
+    &__stroke {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+    }
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+}
+
+@media screen and (max-width:1195px) {
+  .weather-week__content {
+    overflow-x: scroll;
+  }
+}
