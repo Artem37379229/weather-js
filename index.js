@@ -12,7 +12,6 @@ const infoImage = document.querySelector(".info__image");
 const dataInfo = document.querySelector(".data__info");
 const noResult = document.querySelector(".noResult");
 const weekRes = document.querySelector(".weather-week");
-
 let city = null;
 
 function checkInput() {
