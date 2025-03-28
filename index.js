@@ -12,16 +12,51 @@ const infoImage = document.querySelector(".info__image");
 const dataInfo = document.querySelector(".data__info");
 const noResult = document.querySelector(".noResult");
 const weekRes = document.querySelector(".weather-week");
+const dataList = document.querySelector('.dataList')
+const body = document.querySelector('body')
 let city = null;
+
 
 function checkInput() {
   city = input.value.trim();
+  dataList.innerHTML = ''
   if (!city) return;
   input.value = "";
   setTimeout(() => {
     document.querySelector(".data__info").classList.add("data__info-active");
   }, 400);
 }
+
+async function findfCity () {
+  dataList.innerHTML = ''
+  dataInfo.style.opacity = 0;
+  weekRes.style.opacity = 0;
+  noResult.style.opacity = 0;
+  dataList.style.opacity = 1
+  body.style.overflow = 'hidden';
+
+  if (input.value.length < 2 || input.value === '') {
+    return
+  }
+
+  const response = await fetch(`./weather.json`)
+  const data = await response.json()
+  const filterData = await data.filter((item) => item.name.toLowerCase().startsWith(input.value.toLowerCase()))
+  console.log(filterData)
+
+
+  filterData.forEach(item => {
+    const cityEl = document.createElement('li')
+    cityEl.textContent = item.name
+    dataList.append(cityEl)
+    cityEl.addEventListener('click', () => {
+      input.value = cityEl.textContent
+      input.focus()
+      dataList.style.opacity = 0
+    })
+  })
+  }
+  input.addEventListener('input', findfCity)
 
 async function getData() {
   const response = await fetch(
@@ -92,11 +127,13 @@ async function getData() {
     dataInfo.style.opacity = 0;
     noResult.style.opacity = 1;
     weekRes.style.opacity = 0;
+    body.style.overflow = 'hidden';
     return;
   } else {
     dataInfo.style.opacity = 1;
     noResult.style.opacity = 0;
     weekRes.style.opacity = 1;
+    body.style.overflow = 'auto';
   }
 
   const imageUrl = data.weather[0]["main"].toLowerCase();

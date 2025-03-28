@@ -27,7 +27,6 @@
       text-transform: uppercase;
       padding: 9px 45px 9px 20px;
       font-family: $font-family;
-
       &::placeholder {
         font-family: $font-family;
         font-weight: 500;
@@ -37,3 +36,43 @@
     }
   }
 }
+
+.nav {
+  display: flex;
+  justify-content: end;
+  max-height: 322px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+}
+
+.dataList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 5px;
+
+  li {
+    list-style: none;
+    background: rgb(194, 192, 192);
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+}
+
+
