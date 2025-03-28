@@ -5,3 +5,10 @@
     text-transform: uppercase;
     color: #4793ff;
 }
+
+:root {--text-color: #000;}
+
+.dark {
+    --text-color: #fff;
+    background: #0F0F0F;
+  }

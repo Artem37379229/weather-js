@@ -52,11 +52,19 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --text-color: #000;
+}
+
+.dark {
+  --text-color: #fff;
+  background: #0F0F0F;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-bottom: 30px;
 }
 .header__logo {
   display: flex;
@@ -77,6 +85,7 @@ table {
 }
 .header__form-input {
   background: rgba(71, 147, 255, 0.2);
+  color: var(--text-color);
   border-radius: 10px;
   border: none;
   outline: none;
@@ -88,13 +97,23 @@ table {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000;
+  color: var(--text-color);
 }
 .header__form-input::placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000;
+  color: var(--text-color);
+}
+
+.switch {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  background: none;
+  font-size: 30px;
+  outline: none;
+  margin-bottom: 10px;
 }
 
 .nav {
@@ -118,19 +137,22 @@ table {
 .dataList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   padding-right: 5px;
 }
 .dataList li {
   list-style: none;
-  background: rgb(194, 192, 192);
-  border-radius: 30px;
   padding: 10px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000;
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+.dataList li:hover {
+  background: rgba(71, 147, 255, 0.2);
+  border-radius: 30px;
 }
 
 .info {
@@ -164,7 +186,7 @@ table {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 40px;
-  color: #000;
+  color: var(--text-color);
 }
 
 .data {
@@ -205,7 +227,7 @@ table {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #000;
+  color: var(--text-color);
 }
 
 .weather-week {
@@ -250,7 +272,7 @@ table {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: #000;
+  color: var(--text-color);
 }
 .card__data {
   padding-top: 7px;
@@ -267,7 +289,7 @@ table {
   padding-top: 13px;
   font-weight: 500;
   font-size: 18px;
-  color: #000;
+  color: var(--text-color);
 }
 .card__min-temp {
   font-family: "Montserrat", sans-serif;
@@ -285,6 +307,7 @@ table {
 
 body {
   overflow: hidden;
+  transition: all 0.3s;
 }
 
 .container {
@@ -308,9 +331,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   text-align: center;
+  color: var(--text-color);
 }
 
 .data__info {
+  margin-top: 30px;
   display: flex;
   gap: 50px;
   visibility: hidden;
@@ -332,6 +357,9 @@ body {
   .data {
     max-width: 400px;
   }
+  .dataList {
+    padding-right: 0;
+  }
   .data__stroke {
     flex-direction: column;
     height: auto;
@@ -348,6 +376,9 @@ body {
   }
   .nav {
     justify-content: center;
+  }
+  .switch {
+    order: 3;
   }
 }
 @media screen and (max-width: 1195px) {
