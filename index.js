@@ -14,17 +14,12 @@ const noResult = document.querySelector(".noResult");
 const weekRes = document.querySelector(".weather-week");
 const dataList = document.querySelector(".dataList");
 const body = document.querySelector("body");
-const switchEl = document.querySelector('.switch')
+const switchEl = document.querySelector('.header__form-img')
 let city = null;
 
 function switchToggle () {
   switchEl.addEventListener('click', () => {
     body.classList.toggle('dark')
-    if (body.className){
-      switchEl.textContent = 'Dark'
-    } else {
-      switchEl.textContent = 'Light'
-    }
   })
 }
 switchToggle()
@@ -56,9 +51,13 @@ async function findfCity() {
   const filterData = await data.filter((item) => 
     item.name.toLowerCase().startsWith(input.value.toLowerCase())
   );
-  console.log(filterData);
+  const uniqueFilterData = filterData.filter(
+    (item, index, self) => 
+      index === self.findIndex((firstElem) => firstElem.name === item.name)
+  );
+  console.log(uniqueFilterData)
 
-  filterData.forEach((item) => {
+  uniqueFilterData.forEach((item) => {
     const cityEl = document.createElement("li");
     cityEl.textContent = item.name;
     dataList.append(cityEl);
@@ -207,11 +206,6 @@ async function getData() {
 }
 
 function getCity() {
-  inputBnt.addEventListener("click", () => {
-    checkInput();
-    getData();
-    getWeatherOnWeek();
-  });
   input.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       checkInput();
